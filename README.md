@@ -11,7 +11,7 @@ This is a simple multipage website created using HTML5, CSS3, and JavaScript. It
 - Responsive layout using CSS
 - Navigation links between pages
 - JavaScript form validation
-- Deployed on GitHub Pages / Netlify / Vercel
+- Deployed on GitHub Pages
 
 ## Live URL
 [Insert your deployed site URL here]
