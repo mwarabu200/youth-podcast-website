@@ -70,8 +70,12 @@ nav {
   transition: color 0.3s;
 }
 
-#g-links a:hover {
+#lg-links a:hover {
   color: #00CFFF;
+}
+
+#mobile-links{
+  display:none;
 }
 
 /* Mobile Nav Toggle Support */
