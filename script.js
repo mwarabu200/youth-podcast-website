@@ -6,7 +6,7 @@
 document.getElementById("menu-toggle").addEventListener("click", displayMenu);
 
 function displayMenu() {
-  document.getElementById("menu-toggle").style.display = block
+  document.getElementById("mobile-links").style.display = block
 }
 
 // Contact form handling (only applies if contact form exists on the page)
