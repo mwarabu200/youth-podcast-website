@@ -1,7 +1,13 @@
-// Toggle mobile menu
-document.getElementById("menu-toggle")?.addEventListener("click", function () {
-  document.getElementById("nav-links")?.classList.toggle("show");
-});
+// // Toggle mobile menu
+// document.getElementById("menu-toggle")?.addEventListener("click", function () {
+//   document.getElementById("nav-links")?.classList.toggle("show");
+// });
+
+document.getElementById("menu-toggle").addEventListener("click", displayMenu);
+
+function displayMenu() {
+  document.getElementById("menu-toggle").style.display = block
+}
 
 // Contact form handling (only applies if contact form exists on the page)
 document.getElementById("contactForm")?.addEventListener("submit", function (e) {
