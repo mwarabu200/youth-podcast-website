@@ -1,0 +1,233 @@
+/*Base Styles */
+ {
+  box-sizing: border-box;
+}*/
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.overlay {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* already used for overlay */
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+
+/* Header and Navigation */
+header {
+  background-color: #6C63FF; /* Violet */
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  min-height: 100vh;
+  padding: 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00CFFF; /* Electric Blue */
+}
+
+/* Mobile Menu */
+#menu-toggle {
+  display: none;
+  background: #4802ca; /* Coral */
+  color: rgb(216, 213, 224);
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Main Layout */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.hero {
+  /*background: #eaeaff;*/
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Form Styling */
+/* Target the specific contact form using its ID */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the fieldset */
+#contactForm fieldset {
+  border: 2px solid #ccc;
+  padding: 80px;
+  border-radius: 8px;
+}
+
+/* Styling for the legend */
+#contactForm legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the input, textarea, and button elements */
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Style the button specifically */
+#contactForm button {
+  background-color: blue; /* Coral */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contactForm button:hover {
+  background-color: #e15555;
+}
+
+/* Label styling */
+#contactForm label {
+  font-size: 1.1em;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Footer */
+footer {
+  background-color: #6C63FF;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+
+  form {
+    max-width: 100%;
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    grid-column: span 3;
+  }
+
+  form {
+    grid-column: span 2;
+  }
+}
+
