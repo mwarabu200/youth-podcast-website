@@ -76,15 +76,16 @@ nav {
 
 #mobile-links{
   display:none;
+   color: white;
+    text-decoration: none;
+    margin: 0 auto;
 }
 
 /* Mobile Nav Toggle Support */
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
-    color: white;
-    text-decoration: none;
-    margin: 0 auto;
+   
   }
 
   #mobile-links{
