@@ -55,14 +55,14 @@ nav {
   cursor: pointer;
 }
 
-#nav-links {
+#lg-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
 
-#nav-links a {
+#lg-links a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
@@ -70,7 +70,7 @@ nav {
   transition: color 0.3s;
 }
 
-#nav-links a:hover {
+#g-links a:hover {
   color: #00CFFF;
 }
 
@@ -81,16 +81,18 @@ nav {
     margin: 0 auto;
   }
 
-  #nav-links {
+  #mobile-links{
+    display:none;
+  }
+
+  #lg-links {
     display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
   }
 
-  #nav-links.show {
-    display: flex;
-  }
+ 
 }
 
 /* Main Layout */
