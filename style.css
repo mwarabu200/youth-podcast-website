@@ -82,6 +82,8 @@ nav {
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
+    color: white;
+    text-decoration: none;
     margin: 0 auto;
   }
 
