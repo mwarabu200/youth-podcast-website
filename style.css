@@ -1,29 +1,16 @@
-/*Base Styles */
- {
+/* Base Styles */
+* {
   box-sizing: border-box;
-}*/
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('/background1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
 }
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
 }
 
 .page-wrapper {
@@ -34,34 +21,22 @@ html, body {
 
 .overlay {
   flex: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* already used for overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  min-height: 100vh;
 }
-
-footer {
-  background-color: #111;
-  text-align: center;
-  padding: 1rem;
-  color: #fff;
-}
-
 
 /* Header and Navigation */
 header {
-  background-color: #6C63FF; /* Violet */
+  background-color: #6C63FF;
   color: white;
   padding: 1rem;
+  text-align: center;
 }
 
 header h1 {
   margin: 0;
 }
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  min-height: 100vh;
-  padding: 0;
-}
-
 
 nav {
   display: flex;
@@ -70,7 +45,24 @@ nav {
   margin-top: 10px;
 }
 
-nav a {
+#menu-toggle {
+  display: none;
+  background: #4802ca;
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-links a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
@@ -78,27 +70,27 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #00CFFF; /* Electric Blue */
-}
-#mobile-links{
- display:none
-}
-/* Mobile Menu */
-#menu-toggle {
-  display: none;
-  background: #4802ca; /* Coral */
-  color: rgb(216, 213, 224);
-  padding: 0.5rem 1rem;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
+#nav-links a:hover {
+  color: #00CFFF;
 }
 
-#lg-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Mobile Nav Toggle Support */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
 }
 
 /* Main Layout */
@@ -110,14 +102,12 @@ main {
 }
 
 .hero {
-  /*background: #eaeaff;*/
   padding: 2rem;
   text-align: center;
   border-radius: 10px;
 }
 
-/* Form Styling */
-/* Target the specific contact form using its ID */
+/* Contact Form Styles */
 #contactForm {
   display: flex;
   flex-direction: column;
@@ -125,37 +115,46 @@ main {
   margin: auto;
   padding: 20px;
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the fieldset */
 #contactForm fieldset {
   border: 2px solid #ccc;
-  padding: 80px;
+  padding: 2rem;
   border-radius: 8px;
 }
 
-/* Styling for the legend */
 #contactForm legend {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #fff;
 }
 
-/* Style the input, textarea, and button elements */
+#contactForm label {
+  font-size: 1.1em;
+  margin-top: 1rem;
+}
+
 #contactForm input,
 #contactForm textarea,
 #contactForm button {
-  padding: 2rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
 
-/* Style the button specifically */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+}
+
 #contactForm button {
-  background-color: blue; /* Coral */
+  background-color: blue;
   color: white;
   border: none;
   cursor: pointer;
@@ -163,15 +162,8 @@ main {
 }
 
 #contactForm button:hover {
-  background-color: #e15555;
+  background-color: #3333aa;
 }
-
-/* Label styling */
-#contactForm label {
-  font-size: 1.1em;
-  margin-bottom: 0.5rem;
-}
-
 
 /* Footer */
 footer {
@@ -179,26 +171,6 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-/* Responsive Menu */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-    margin: 0 auto;
-  }
-#mobile-links{
- display:block;
-}
-  #lg-links {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-links.show {
-    display: flex;
-  }
 }
 
 /* Responsive Layout */
@@ -234,4 +206,3 @@ footer {
     grid-column: span 2;
   }
 }
-
