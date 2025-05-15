@@ -187,7 +187,9 @@ footer {
     display: block;
     margin: 0 auto;
   }
-
+#mobile-links{
+ display:block;
+}
   #lg-links {
     display: none;
     flex-direction: column;
